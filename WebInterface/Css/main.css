@@ -1,0 +1,21 @@
+html{
+  background-color: #DDDDDD;
+  background-size: 100% auto;
+  background-attachment: fixed;
+}
+body{
+  background-color: whitesmoke;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 10pt;
+}
+
+
+/* main frame */
+
+
+
+#SAQHeader{
+  background-color: whitesmoke;
+  display: inline-block;
+}
+

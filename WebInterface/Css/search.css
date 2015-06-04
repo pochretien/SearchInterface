@@ -1,0 +1,229 @@
+/****************
+    main header
+*****************/
+.main-header {
+    background-color: #7A0036;
+    height: 90px;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    box-shadow: 2px 2px 3px grey;
+}
+@media (min-width: 50em) {
+    .main-header {
+        height: 100px;
+    }
+}
+/****************
+ main header title
+*****************/
+.main-header .main-header-title {
+    color: white;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+@media (min-width: 50em) {
+    .main-header .main-header-title {
+        height: 100%;
+        padding: 0;
+    }
+}
+.main-header .main-header-title h1 {
+    color: whitesmoke;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 26pt;
+    margin :0;
+    padding-left: 80px;
+    font-family: capture;
+    text-shadow: 2px 3px #303030;
+}
+@media (min-width: 50em) {
+    .main-header .main-header-title h1 {
+        left: 30px;
+        position: absolute;
+        top: 34px;
+    }
+}
+
+/****************
+main header search
+*****************/
+.main-header .main-header-search {
+    background-color: #cccccc;
+    background-image: url("../Img/search_icon.png");
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    height: 60px;
+}
+@media (min-width: 50em) {
+    .main-header .main-header-search {
+        background-position: 30px center;
+        bottom: 0;
+        height: auto;
+        left: 300px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+.main-header .main-header-search input {
+    background-color: transparent;
+    border: 0;
+    font-size: 18pt;
+    font-weight: 200;
+    height: 100%;
+    outline: 0;
+    padding: 0 10px 0 50px;
+    width: 60%;
+
+}
+@media (min-width: 50em) {
+    .main-header .main-header-search input {
+        padding: 0 160px 0 80px;
+    }
+}
+.main-header .main-header-search input::-webkit-input-placeholder {
+    color: #666666;
+}
+.main-header .main-header-search input:-moz-placeholder {
+    /* Firefox 18- */
+    color: #666666;
+}
+.main-header .main-header-search input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #666666;
+}
+.main-header .main-header-search input:-ms-input-placeholder {
+    color: #666666;
+}
+*::after,
+*::before {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/****************
+    main-logo
+*****************/
+#header-logo{
+    max-height: 95px;
+    max-width: 95px;
+    padding-bottom: 2.5px;
+    padding-left: 2.5px;
+    padding-top: 2.5px;
+
+}
+
+/****************
+  options body
+*****************/
+#options-content {
+    padding-left: 5%;
+    padding-right: 5%;
+    box-shadow: rgba(51,51,51, 0.5) 0px 1px 2px 0px;
+}
+#searchOptions{
+
+}
+
+.box-option{
+    list-style-type: none;
+    display: block;
+    width: 100%;
+}
+
+.line-separate-checkbox{
+    border-color: rgba(72, 70, 73, 0.3);
+    width: 90%;
+}
+
+.li-options{
+    display: inline-block;
+}
+.li-options input{
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.li-options span {
+    margin-right: 60px;
+    display: inline-block;
+}
+.search-advance-option{
+
+}
+
+.search-advance-option h3{
+    float:right;
+    margin-top:0px;
+    background-color: transparent;
+    width: 20%;
+    height: 100%;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.search-advance-option h3:hover{
+    color: #7A0036;
+}
+
+a.search-advance-option, a.search-advance-option:hover {
+    text-decoration:none;
+    font-weight:bold;
+    color: #666666;
+}
+
+/****************
+   box option
+****************/
+.box-option{
+    display: table;
+    position:relative;
+    font-family: archivoNarrow;
+    font-weight: 500;
+    font-size: 12pt;
+
+}
+.checkbox input[type="checkbox"]{
+    position: relative;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.title-option{
+    width: 100%;
+    text-align: left;
+
+}
+.checkbox-options{
+    margin-left: 5px;
+}
+.checkbox-option{
+    width: 100px;
+}
+
+/****************
+    html tags
+*****************/
+html,
+body {
+    background-color: #e6e6e6;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+html,
+body,
+input,
+button {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+h1{
+
+    color: whitesmoke;
+}
+
