@@ -1,7 +1,7 @@
 /**
  * Created by Unetitebiere on 31/05/2015.
  */
-var access_token = '';
+var access_token = '6318103b-f9da-437c-854b-9e6f1f44e27b';
 
 var app = (function() {
 

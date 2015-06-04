@@ -21,6 +21,7 @@
             <h1></h1>
         </div>
         <div id="searchBar" class="main-header-search">
+            <span id="click-search-button">&nbsp</span>
             <input id="searchInput" placeholder='Search for wine, wisky and more...' type="search"/>
             <a class="search-advance-option" data-toggle="collapse" href="#collapseOptions" aria-expanded="false"
                aria-controls="collapseOptions">
@@ -45,7 +46,7 @@
                     <%
                     options.values.forEach(function(option){%>
                                     <span class="li-options">
-                                        <input type="checkbox" name="<%=options.field%>" id="<%=option.Value%>"
+                                        <input type="checkbox" name="<%=options.Field%>" id="<%=option.Value%>"
                                                class="checkbox-option">
                                         <span><%=option.lookupValue %></span>
                                     </span>
@@ -64,10 +65,10 @@
             <%
             model.forEach(function(wine) {
             var boxColor = "background-color:rgba(228,228,228,0.1);";
-            if(wine.raw.tpcouleur=="Rouge")boxColor = "background-color:rgba(122,0,54,0.1);";
+            if(wine.raw.tpcouleur=="Rouge")boxColor = "background-color:rgba(122,0,54,0.08);";
             if(wine.raw.tpcouleur=="Blanc")boxColor = "background-color:rgba(234,255,102,0.15);";
             if(wine.raw.tpcouleur=="Orange")boxColor = "background-color:rgba(192,128,80,0.1);";
-            if(wine.raw.tpcouleur=="rosé")boxColor = "background-color:rgba(159,66,59,0.15);";
+            if(wine.raw.tpcouleur=="Rosé")boxColor = "background-color:rgba(159,66,59,0.08);";
             %>
 
             <li style=<%=boxColor %> class="wine-cards" >
@@ -79,32 +80,32 @@
                         <h4 class="li-head"><%= wine.raw.tpnomdebouteille %></h4>
 
                         <div class="pairInfo">
-                            <span class="infoCategorie">Catégorie : </span>
-                            <span><%= wine.raw.tpcategorieraw %></span>
+                            <div class="info-label">Catégorie</div>
+                            <span class="info-result"><%= wine.raw.tpcategorieraw %></span>
                         </div>
                         <div class="pairInfo">
-                            <span class="infoCategorie">Producteur : </span>
-                            <span><%= wine.raw.tpproducteur %></span>
+                            <div class="info-label">Producteur</div>
+                            <span class="info-result"><%= wine.raw.tpproducteur %></span>
+                        </div>
+                        <div class="pair-info">
+                            <div class="info-label">Région</div>
+                            <span class="info-result"><%= wine.raw.tpregion %></span>
                         </div>
                         <div class="pairInfo">
-                            <span class="infoCategorie">Région : </span>
-                            <span><%= wine.raw.tpregion %></span>
-                        </div>
-                        <div class="pairInfo">
-                            <span class="infoCategorie">Pays : </span>
-                            <span><%= wine.raw.tppays %></span>
+                            <div class="info-label">Pays</div>
+                            <span class="info-result"><%= wine.raw.tppays %></span>
                         </div>
 
                         <div class="pairInfo">
-                            <span class="infoCategorie">Disponibilité : </span>
-                            <span><%= wine.raw.tpdisponibilite %></span>
+                            <div class="info-label">Disponibilité</div>
+                            <span class="info-result"><%= wine.raw.tpdisponibilite %></span>
                         </div>
                         <div class="pairInfo">
-                            <span class="infoCodeSQA">Code SAQ : </span>
-                            <span><%= wine.raw.tpcodesaq %></span>
+                            <div class="info-label">Code SAQ</div>
+                            <span class="info-result"><%= wine.raw.tpcodesaq %></span>
                         </div>
-                        <div class="showWinePrice">
-                            <span><%= wine.raw.tpprixnum%> $</span>
+                        <div class="show-wine-price">
+                            <span class="info-result"><%= wine.raw.tpprixnum%> $</span>
                         </div>
                     </div>
                 </a>

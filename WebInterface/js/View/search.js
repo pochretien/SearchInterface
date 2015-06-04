@@ -5,14 +5,14 @@ app.views.search = Backbone.View.extend({
     template: _.template($("#searchTemplate").html()),
     options: ["tpdisponibilite","tpprixbande","tpfamilledevinsplitgroup","tppays","tpregion","tpcouleur","tpformat","tpcategorie"],
     optionsDict: {
-        "tpdisponibilite" : 'Disponibilité',
+        "tpdisponibilite" : 'Disponibilit\u00E9',
         "tpprixbande" : "Gamme de prix",
         "tpfamilledevinsplitgroup": "Famille de vin",
         "tppays": "Pays",
         "tpregion": "Region",
         "tpcouleur":"Couleur",
         "tpformat":"Format",
-        "tpcategorie": "Catégorie"},
+        "tpcategorie": "Cat\u00E9gorie"},
     events: {
        'click #searchButton' : 'searchApi'
     },
@@ -22,6 +22,7 @@ app.views.search = Backbone.View.extend({
         app.currentModels = this.model;
         /* attach event to the input */
         $('#user-search').submit(this.searchApi);
+        $('#click-search-button').click(this.searchApi);
         var that = this;
         this.model.fetch({
            success: function(){
@@ -40,10 +41,10 @@ app.views.search = Backbone.View.extend({
         var clientSearchInput = $('#searchInput').val();
         var htmlTable = $("#user-search input:checkbox:checked");
         htmlTable.each(function(index, value) {
-            options['@'+ value.name] = value.id;
+            options['@'+ value.name] = '"'+value.id+'"';
         });
         var dataObject = createDataObject(clientSearchInput, options);
-        var model = new app.collections.wines();
+           var model = new app.collections.wines();
         //model.request = resquestUrl +'&sortField="score"&numberOfResults=10';
 
         model.fetch({

@@ -32,7 +32,6 @@
     display: block;
     width: 100%;
     height: 100%;
-
     content: ' ';
     opacity: 0.4;
 }
@@ -45,6 +44,19 @@
 .inner {
     display: table-row;
     overflow: hidden;
+    text-decoration:none;
+}
+.inner:hover{
+    text-decoration:none;
+    cursor: auto;
+}
+.inner:focus{
+    text-decoration: none;
+}
+.info-label{
+    display: inline-block;
+    width: 100px;
+    margin-left: 3px;
 }
 .li-img {
     display: table-cell;
@@ -58,16 +70,23 @@
     height: auto;
     margin-left: 5px;
 }
+.show-wine-price{
+    font-size:14pt;
+    float: right;
+    margin-right: 20px;
+}
+
 .li-text {
     padding: 10px;
     display: table-cell;
     vertical-align: middle;
     width: 70%;
-    text-decoration: none;
     color: #666666;
 }
 .li-head {
     margin: 0;
+    font-weight: 500;
+    margin-bottom: 3px;
 }
 .li-sub {
     margin: 0;
